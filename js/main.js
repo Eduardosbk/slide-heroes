@@ -55,7 +55,6 @@ export default class Slide {
     const margin = (this.wrapper.offsetWidth - slide.offsetWidth) / 2;
     return -(slide.offsetLeft - margin);
   }
-
   slidesConfig() {
     this.slideArray = [...this.slide.children].map((element) => {
       const position = this.slidePosition(element);
@@ -66,7 +65,6 @@ export default class Slide {
     });
     console.log(this.slideArray);
   }
-
   slidesIndexNav(index) {
     const last = this.slideArray.lengh - 1;
     this.index = {
@@ -75,14 +73,12 @@ export default class Slide {
       next: index === last ? undefined : index + 1
     }
   }
-
   changeSlide(index) {
     const activeSlide = this.slideArray[index];
     this.moveSlide(activeSlide.position);
     this.slidesIndexNav(index);
     this.dist.finalPosition = activeSlide.position;
   }
-
   init(){
     this.bindEvents();
     this.addSlideEvents();
