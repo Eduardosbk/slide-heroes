@@ -1,4 +1,4 @@
-# slide-heroes
+# Slide-heroes
 Amazing slide project to practice CSS and Javascript
 
 <h1 align="center">
